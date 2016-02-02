@@ -1,0 +1,60 @@
+#graphs {
+  margin-top: 20px;
+}
+
+#graphs .axis path {
+  fill: none;
+  stroke: none;
+}
+
+#graphs .axis line {
+  fill: none;
+  stroke: #ccc;
+  stroke-dasharray: 1,2;
+  shape-rendering: crispEdges;
+}
+
+#graphs .axis text,
+#graphs .axis-label {
+  fill: #888;
+}
+
+#graphs .axis .null-line {
+  stroke-dasharray: 0;
+  stroke: #aaa;
+}
+
+.voltages {
+  fill: none;
+  stroke: #3f88cc;
+  stroke-width: 1.5px;
+}
+
+.ir_front {
+  fill: rgba(215,100,170,.83);
+  stroke: none;
+}
+
+.ir_side {
+  fill: rgba(73,84,155,.83);
+  stroke: none;
+}
+
+.interaction-area {
+  fill: transparent;
+  cursor: default;
+}
+
+.side-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  fill: rgba(0,0,0,.5);
+}
+
+.graph-title {
+  text-transform: uppercase;
+  text-anchor: middle;
+  color: black;
+  font-weight: bold;
+  font-size: 12px;
+}

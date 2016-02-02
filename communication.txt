@@ -1,0 +1,44 @@
+standard message from robot:
+
+TIME <milliseconds>
+<property1> <value>\n
+<property2> <value>\n
+...
+END
+
+alternatively:
+
+TIME 100
+PARAM1 VALUE, [VALUE2...]
+PARAM2
+...
+END
+
+for regular state update:
+
+TIME 100
+POS <x> <y>
+ANGLE <rad>
+IR_ANGLES <deg> <deg>
+VOLTAGES <int> <int>
+SENSORS <raw message>
+END
+
+
+
+database:
+
+collection: [{
+  host: "",
+  note: "",
+  begin: <long int>,
+  end: <long int>,
+  states: [{
+    time: <long int>,
+    pos: {x: <double>, y: <double>},
+    angle: <double>,
+    ir_angles: {left: <int>, right: <int>},
+    voltages: {left: <int>, right: <int>},
+    sensors: <raw async response>
+  }]
+}]
