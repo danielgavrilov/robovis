@@ -1,0 +1,42 @@
+<html>
+
+<head>
+  <title>What does the robot see?</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+<div id="container">
+
+  <div id="sidebar">
+    <form id="address">
+      <input type="text" value="128.16.79." id="host">
+      <input type="submit" value="Listen">
+    </form>
+    <ul id="sessions"></ul>
+  </div>
+
+  <div id="content">
+    <div id="map">
+      <svg width="960" height="500">
+        <defs>
+          <radialGradient id="rangeGradient" cx="50%" cy="100%" r="100%">
+            <stop offset="0%" stop-color="rgba(0,0,0,.15)"></stop>
+            <stop offset="100%" stop-color="rgba(0,0,0,0)"></stop>
+          </radialGradient>
+        </defs>
+      </svg>
+    </div>
+
+    <div id="graphs"></div>
+  </div>
+
+</div>
+<script src="jspm_packages/system.js" charset="utf-8"></script>
+<script src="config.js" charset="utf-8"></script>
+<script type="text/javascript">
+  System.import("src/main");
+</script>
+</body>
+</html>

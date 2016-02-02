@@ -1,0 +1,123 @@
+#map svg {
+  cursor: default;
+  background-color: white;
+  border: 1px solid rgba(0,0,0,.15);
+}
+
+/* axes */
+
+#map .axis path {
+  fill: none;
+  stroke: none;
+}
+
+#map .axis line {
+  fill: none;
+  stroke: #ccc;
+  stroke-dasharray: 1,4;
+  shape-rendering: crispEdges;
+}
+
+#map .axis text,
+#map .axis-label {
+  fill: #888;
+}
+
+/* robot */
+
+.robot {
+  opacity: .85;
+}
+
+.base.top {
+  fill: #888;
+}
+
+.base.bottom {
+  fill: #777;
+}
+
+.wheel {
+  fill: black;
+}
+
+.base {
+  stroke: rgba(255,255,255,.4);
+}
+
+.stop-button {
+  fill: red;
+}
+
+.raspberry-pi {
+  fill: #a40569;
+}
+
+.bumper {
+  fill: none;
+}
+
+.bumper.active {
+  fill: red;
+}
+
+/* trail */
+
+.trail {
+  fill: none;
+  stroke: #467F3F;
+  stroke-dasharray: 1,1;
+}
+
+/* obstructions */
+
+.obstruction {
+  fill: #ddd;
+  stroke: none;
+}
+
+.obs--bumper {
+  fill: red;
+}
+
+.obs--us {
+  fill: #00AFB6;
+}
+
+.obs--ir_front {
+  fill: #D764AA;
+}
+
+.obs--ir_side {
+  fill: #49549B;
+}
+
+/**/
+
+.sensor-range {
+  fill: url(#rangeGradient);
+}
+
+.left-ir-reading,
+.right-ir-reading,
+.left-side-ir-reading,
+.right-side-ir-reading,
+.us-reading {
+  fill: none;
+  stroke: rgba(0,0,0,.6);
+  stroke-width: 1.5px;
+}
+
+.left-ir-reading,
+.right-ir-reading {
+  /*stroke: #D764AA;*/
+}
+
+.left-side-ir-reading,
+.right-side-ir-reading {
+  /*stroke: #49549B;*/
+}
+
+.us-reading {
+  /*stroke: #00AFB6;*/
+}
