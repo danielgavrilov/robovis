@@ -1,6 +1,8 @@
 #sessions {
   line-height: 1.4;
   color: rgba(0,0,0,.5);
+  background-color: white;
+  border: 1px solid rgba(0,0,0,.2);
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -9,14 +11,19 @@
 .session {
   padding: 7px 10px;
   cursor: pointer;
+  border-bottom: 1px solid rgba(0,0,0,.15);
+}
+
+.session:last-child {
+  border-bottom: none;
 }
 
 .session:hover {
-  background: #f0f0f0;
+  background: #f2f2f2;
 }
 
 .session.selected {
-  background: #e1e1e1;
+  background: #e7e7e7;
 }
 
 .host {
