@@ -7,10 +7,18 @@ import initMenu from "./menu";
 import Sessions from "./sessions";
 import Parser from "./parse/index";
 
-let socket = io();
+let STATIC = true;
+
 let map = initMap($("#map")[0]);
 let graphs = initGraphs($("#graphs")[0]);
 let menu = initMenu($("#sessions")[0]);
+
+let socket;
+
+if (!STATIC) {
+  socket = io();
+}
+
 let sessions = new Sessions(socket);
 
 window.graphs = graphs;
@@ -112,7 +120,9 @@ $("#address").on("submit", function() {
   return false;
 });
 
-// load static JSON data from race.
-$.getJSON("extracts/race-sessions.json", function(data) {
-  sessions.load(data);
-});
+if (STATIC) {
+  // load static JSON data from race.
+  $.getJSON("extracts/race-sessions.json", function(data) {
+    sessions.load(data);
+  });
+}
