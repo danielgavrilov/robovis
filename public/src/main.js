@@ -111,3 +111,8 @@ $("#address").on("submit", function() {
   socket.emit("setAddress", { host });
   return false;
 });
+
+// load static JSON data from race.
+$.getJSON("extracts/race-sessions.json", function(data) {
+  sessions.load(data);
+});
