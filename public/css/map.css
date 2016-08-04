@@ -96,6 +96,7 @@
 
 .sensor-range {
   fill: url(#rangeGradient);
+  opacity: .15;
 }
 
 .left-ir-reading,
