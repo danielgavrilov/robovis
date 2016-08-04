@@ -69,9 +69,10 @@ export default function appendRobot(selection) {
     let leftFrontIR = sensors.append("g")
         .attr("transform", "translate(-9,-9)")
       .append("g")
-        .attr("class", "left-ir-sensor sensor-range")
+        .attr("class", "left-ir-sensor")
 
     leftFrontIR.append("path")
+        .attr("class", "sensor-range")
         .attr("d", sensorRange(irWidth, frontIRRange, frontIRAngle));
 
     leftFrontIR.append("path")
@@ -81,9 +82,10 @@ export default function appendRobot(selection) {
     let rightFrontIR = sensors.append("g")
         .attr("transform", "translate(9,-9)")
       .append("g")
-        .attr("class", "right-ir-sensor sensor-range")
+        .attr("class", "right-ir-sensor")
 
     rightFrontIR.append("path")
+        .attr("class", "sensor-range")
         .attr("d", sensorRange(irWidth, frontIRRange, frontIRAngle));
 
     rightFrontIR.append("path")
