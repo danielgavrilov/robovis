@@ -33,10 +33,16 @@
   </div>
 
 </div>
+
 <script src="jspm_packages/system.js" charset="utf-8"></script>
 <script src="config.js" charset="utf-8"></script>
 <script type="text/javascript">
-  System.import("src/main");
+  if (window.System) {
+    System.import("src/main");
+  } else {
+    document.write("<script src='build.js'><\/script>");
+  }
 </script>
+
 </body>
 </html>
