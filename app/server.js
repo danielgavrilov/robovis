@@ -61,6 +61,13 @@ io.on("connection", function(socket) {
 
 // express.js
 
+app.get("/sessions.json", function(req, res) {
+  storage.getAll(function(sessions) {
+    if (session) sessions.push(session.toJSON());
+    res.json(sessions);
+  });
+});
+
 app.use(express.static(path.resolve(__dirname, "../public")));
 
 app.use(function(err, req, res, next) {
