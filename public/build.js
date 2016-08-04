@@ -4486,16 +4486,16 @@ $__System.register("9", ["4", "5", "6", "7", "8", "a", "b", "c"], function (_exp
             var rightBumper = sensors.append("path").attr("class", "bumper right-bumper").attr("transform", "scale(-1,1)").attr("d", bumper(-width / 2 - bumperOffset, -width / 2 - bumperOffset, width / 2, height / 2 - wheelRadius, bottomBaseNotch));
 
             // left IR sensor
-            var leftFrontIR = sensors.append("g").attr("transform", "translate(-9,-9)").append("g").attr("class", "left-ir-sensor sensor-range");
+            var leftFrontIR = sensors.append("g").attr("transform", "translate(-9,-9)").append("g").attr("class", "left-ir-sensor");
 
-            leftFrontIR.append("path").attr("d", sensorRange(irWidth, frontIRRange, frontIRAngle));
+            leftFrontIR.append("path").attr("class", "sensor-range").attr("d", sensorRange(irWidth, frontIRRange, frontIRAngle));
 
             leftFrontIR.append("path").attr("class", "left-ir-reading");
 
             // right IR sensor
-            var rightFrontIR = sensors.append("g").attr("transform", "translate(9,-9)").append("g").attr("class", "right-ir-sensor sensor-range");
+            var rightFrontIR = sensors.append("g").attr("transform", "translate(9,-9)").append("g").attr("class", "right-ir-sensor");
 
-            rightFrontIR.append("path").attr("d", sensorRange(irWidth, frontIRRange, frontIRAngle));
+            rightFrontIR.append("path").attr("class", "sensor-range").attr("d", sensorRange(irWidth, frontIRRange, frontIRAngle));
 
             rightFrontIR.append("path").attr("class", "right-ir-reading");
 
