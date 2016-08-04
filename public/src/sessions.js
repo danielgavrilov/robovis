@@ -7,9 +7,11 @@ export default class Sessions extends eventEmitter {
   constructor(socket) {
     super();
     this.sessions = [];
-    socket.on("sessions", this.load.bind(this));
-    socket.on("newSession", this.add.bind(this));
-    socket.on("newMessage", this.handleMessage.bind(this));
+    if (socket) {
+      socket.on("sessions", this.load.bind(this));
+      socket.on("newSession", this.add.bind(this));
+      socket.on("newMessage", this.handleMessage.bind(this));
+    }
   }
 
   all() {
