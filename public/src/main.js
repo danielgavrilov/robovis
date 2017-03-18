@@ -124,5 +124,7 @@ if (STATIC) {
   // load static JSON data from race.
   $.getJSON("extracts/race-sessions.json", function(data) {
     sessions.load(data);
+    let last = _.last(sessions.all());
+    if (last && last.id()) menu.select(last.id());
   });
 }
