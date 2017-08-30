@@ -14,9 +14,11 @@ function ir_side_to_cm(val) {
 }
 
 function fastMoving(state) {
-  let s = state.wheelspeed;
-  return Math.abs(s[0] - s[1]) > 20
-      || ((s[0]+s[1]) / 2) > 300;
+  // temporarily disable 'fast moving' filter
+  return false;
+  // let s = state.wheelspeed;
+  // return Math.abs(s[0] - s[1]) > 20
+  //     || ((s[0]+s[1]) / 2) > 300;
 }
 
 export default {
