@@ -24,18 +24,22 @@
   stroke: #aaa;
 }
 
+#graphs .background {
+  fill: white;
+}
+
 .voltages {
   fill: none;
   stroke: #3f88cc;
   stroke-width: 1.5px;
 }
 
-.ir_front {
+.ir_front .area {
   fill: rgba(215,100,170,.83);
   stroke: none;
 }
 
-.ir_side {
+.ir_side .area {
   fill: rgba(73,84,155,.83);
   stroke: none;
 }
