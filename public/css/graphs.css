@@ -9,23 +9,26 @@
 
 #graphs .axis line {
   fill: none;
-  stroke: #ccc;
+  stroke: rgba(0,0,0, 0.2);
   stroke-dasharray: 1,2;
   shape-rendering: crispEdges;
 }
 
 #graphs .axis text,
 #graphs .axis-label {
-  fill: #888;
+  fill: rgba(0,0,0, 0.45);
 }
 
 #graphs .axis .null-line {
   stroke-dasharray: 0;
-  stroke: #aaa;
+  stroke: rgba(0,0,0, 0.35);
 }
 
 #graphs .background {
   fill: white;
+  stroke: black;
+  stroke-width: 1px;
+  shape-rendering: crispEdges;
 }
 
 .voltages {
