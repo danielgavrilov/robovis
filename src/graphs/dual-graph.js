@@ -55,13 +55,13 @@ export default function dualGraph({
       .tickFormat(Math.abs);
 
   let areaLeftIR = d3.svg.area()
-      .interpolate("linear")
+      .interpolate("step-after")
       .x(d => d.x)
       .y0(height / 2)
       .y1(d => d.y);
 
   let areaRightIR = d3.svg.area()
-      .interpolate("linear")
+      .interpolate("step-after")
       .x(d => d.x)
       .y0(height / 2)
       .y1(d => d.y);
