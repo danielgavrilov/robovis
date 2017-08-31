@@ -57,13 +57,13 @@ export default function dualGraph({
   let areaLeftIR = d3.svg.area()
       .interpolate("linear")
       .x(d => d.x)
-      .y0(0)
+      .y0(height / 2)
       .y1(d => d.y);
 
   let areaRightIR = d3.svg.area()
       .interpolate("linear")
       .x(d => d.x)
-      .y0(height)
+      .y0(height / 2)
       .y1(d => d.y);
 
   let yAxisElem = svg.append("g")
