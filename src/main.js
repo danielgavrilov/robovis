@@ -74,10 +74,9 @@ function renderMapAt(parser, time) {
 }
 
 function renderGraphs(parser) {
-  // graphs.voltages(parser.get("voltages"));
-  console.log(parser.get("ir_side"))
   graphs.frontIR.update(parser.get("ir_front"));
   graphs.sideIR.update(parser.get("ir_side"));
+  graphs.voltages.update(parser.get("voltages"));
 }
 
 let throttledRenderMap = _.throttle(renderMap, 1000/25);

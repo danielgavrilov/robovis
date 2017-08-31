@@ -1,7 +1,8 @@
 import d3 from "d3";
-// import voltages from "./voltages";
+
 import frontIR from "./frontIR";
 import sideIR from "./sideIR";
+import voltages from "./voltages";
 
 export default function(element) {
 
@@ -64,6 +65,7 @@ export default function(element) {
 
   let front = frontIR({ container, x, width, height: 80, offsetTop: 0 });
   let side  = sideIR({ container, x, width, height: 55, offsetTop: 110 });
+  let voltagesGraph  = voltages({ container, x, width, height: 60, offsetTop: 200 });
 
   function zoomed() {
     redraw();
@@ -78,12 +80,14 @@ export default function(element) {
   function redraw() {
     front.redraw();
     side.redraw();
+    voltagesGraph.redraw();
     xAxisElem.call(xAxis);
   }
 
   return {
     frontIR: front,
     sideIR: side,
+    voltages: voltagesGraph,
     onTimeChange: function(f) {
       svgRoot.on("mousemove", function() {
         let p = d3.mouse(svg.node());

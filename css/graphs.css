@@ -31,10 +31,10 @@
   shape-rendering: crispEdges;
 }
 
-.voltages {
-  fill: none;
-  stroke: #3f88cc;
-  stroke-width: 1.5px;
+.voltages .area {
+  fill: rgba(63, 136, 204, .2);
+  stroke: rgba(63, 136, 204, .75);
+  stroke-width: 1px;
 }
 
 .ir_front .area {
