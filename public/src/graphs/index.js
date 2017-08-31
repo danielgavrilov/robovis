@@ -65,7 +65,7 @@ export default function(element) {
 
   let front = frontIR({ container, x, width, height: 80, offsetTop: 0 });
   let side  = sideIR({ container, x, width, height: 55, offsetTop: 110 });
-  let voltagesGraph  = voltages({ container, x, width, height: 60, offsetTop: 200 });
+  let voltagesGraph  = voltages({ container, x, width, height: 60, offsetTop: 195 });
 
   function zoomed() {
     redraw();

@@ -38,12 +38,12 @@
 }
 
 .ir_front .area {
-  fill: rgba(215,100,170,.83);
+  fill: rgba(215,100,170,.80);
   stroke: none;
 }
 
 .ir_side .area {
-  fill: rgba(73,84,155,.83);
+  fill: rgba(73,84,155,.75);
   stroke: none;
 }
 
